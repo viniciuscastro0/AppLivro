@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Escolha uma opção:"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/rdgOpcoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbtnTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titulo"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/rbtnAutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Autor"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/rbtnEditora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editora"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtconsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rdgOpcoes"
+        android:layout_marginTop="5dp"
+        android:hint="Digite o que quer pesquisar..." />
+
+    <Button
+        android:id="@+id/btnConsultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/edtconsulta"
+        android:layout_margin="5dp"
+        android:onClick="consultar"
+        android:text="Pesquisar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/btnConsultar">
+
+    <ListView
+        android:id="@+id/lvConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnConsultar">
+
+    </ListView>
+    </LinearLayout>
+</RelativeLayout>
